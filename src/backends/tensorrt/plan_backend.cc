@@ -174,7 +174,7 @@ PlanBackend::CreateExecutionContexts(
         if (queue == nullptr) {
           queue.reset(new SyncQueue<size_t>());
         }
-        queue->Put(contexts_.size() - 1);
+        queue->Put(contexts_.size());
 
         const std::string instance_name = group.name() + "_" +
                                           std::to_string(c) + "_gpu" +
